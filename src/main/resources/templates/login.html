@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Tune Hub</title>
+    <style>
+    	body {
+		    margin: 0;
+		    padding: 0;	    
+		    background-image: url('https://www.antiqueswebdesign.com/ph9/upload/editor/images/no-background-music_vinyl.jpeg');
+		    background-size: cover;
+		    background-position: center;
+		    font-family: Arial, sans-serif;
+		    height: 100vh; /* Ensure full height */
+		    overflow: hidden; /* Hide scrollbars */
+		}
+		
+		.container {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    max-width: 400px;
+		    padding: 20px;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
+		    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+		    overflow-y: auto; /* Enable vertical scrolling within the form if needed */
+		    max-height: calc(100% - 40px); /* Ensure form fits within the viewport */
+		}
+		
+		h2 {
+		    text-align: center;
+		}
+		
+		input[type="email"],
+		input[type="password"] {
+		    width: calc(100% - 22px); /* Adjust for padding and borders */
+		    padding: 10px;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
+		}
+
+		
+		button[type="submit"] {
+		    display: block;
+		    width: calc(100% - 22px); /* Adjust for padding and borders */
+		    padding: 10px;
+		    margin-top: 10px;
+		    background-color: #007bff;
+		    color: #fff;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		}
+		
+		button[type="submit"]:hover {
+		    background-color: #0056b3;
+		}
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="/login" method="post">
+        <h2>Login</h2>
+        <div>
+	        <label for="email">Email:</label>
+	    	<input type="email" id="email" name="email" required>
+	    </div>
+        <br/>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <br/>
+        <button type="submit">LOGIN</button>
+    </form>
+</div>
+</body>
+</html>

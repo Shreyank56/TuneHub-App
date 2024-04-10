@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Song</title>
+<style>
+	body {
+		    margin: 0;
+		    padding: 0;	    
+		    background-image: url('https://imgs.search.brave.com/-sqgdT41rSJNO8CR5HP_tAYDIeHlQUMldzFpGqG2awA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9hYnN0cmFjdC1t/dXNpYy1iYWNrZ3Jv/dW5kLXdpdGgtbm90/ZXMtM2QtaW1hZ2Ut/ZGVzaWduXzQ3NjM2/My0yMzc1LmpwZz9z/aXplPTYyNiZleHQ9/anBn');
+		    background-size: cover;
+		    background-position: center;
+		    font-family: Arial, sans-serif;
+		    height: 100vh; /* Ensure full height */
+		    overflow: hidden; /* Hide scrollbars */
+		}
+		
+		.container {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    max-width: 400px;
+		    padding: 20px;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
+		    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+		    overflow-y: auto; /* Enable vertical scrolling within the form if needed */
+		    max-height: calc(100% - 40px); /* Ensure form fits within the viewport */
+		}
+		
+		h2 {
+		    text-align: center;
+		}
+		
+		
+		input[type="text"]{
+		    width: calc(100% - 22px); /* Adjust for padding and borders */
+		    padding: 10px;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
+		}
+		
+		button[type="submit"] {
+		    display: block;
+		    width: calc(100% - 22px); /* Adjust for padding and borders */
+		    padding: 10px;
+		    margin-top: 10px;
+		    background-color: #007bff;
+		    color: #fff;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		}
+		
+		button[type="submit"]:hover {
+		    background-color: #ED7117;
+		}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>ADD DESIRED SONGS</h2>
+	<form action="/addsongs" method="post">
+	    <label>Song Name: </label>
+	    <input type="text" name="name"/>
+	    <br/><br/>
+	    <label>Song Artist: </label>
+	    <input type="text" name="artist"/>
+	    <br/><br/>
+	    <label>Song Genre: </label>
+	    <input type="text" name="genre"/>
+	    <br/><br/>
+	    <label>Song Link: </label>
+	    <input type="text" name="link"/>
+	    <br/><br/>
+	    <input type="submit" value="ADD SONGS"/>
+	</form>
+</div>
+</body>
+</html>

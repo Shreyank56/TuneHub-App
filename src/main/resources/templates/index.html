@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <style>
+    	.container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .background {
+		      position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 100%;
+			    background-image: url('https://img.freepik.com/free-photo/abstract-watercolor-guitar-exploding-with-colorful-motion-generated-by-ai_188544-19725.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1711497600&semt=sph');
+			    background-size: cover;
+			    background-position: center;
+			    transition: filter 0.5s ease;
+		}
+		a {
+			    background-color: #62856d; /* Greenish background for buttons and links */
+			    color: white;
+			    padding: 10px 20px;
+			    text-decoration: none;
+			    border: none;
+			    border-radius: 5px;
+		}
+			
+		a:hover {
+			    background-color: #ff7e26;
+		}
+
+		.start-button {
+		    padding: 10px 20px;
+		    font-size: 16px;
+		    background-color: rgba(255, 255, 255, 0.8);
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    bottom: 20px;
+		    left: 50%;
+		}
+		
+		.form-container {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    padding: 20px;
+		    background-color: rgba(255, 255, 255, 0.9);
+		    border-radius: 10px;
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		}
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <title>Welcome to Tune Hub!</title>
+</head>
+<body>
+<div class="container">
+        <div id="blur-background" class="background" onClick="toggleBlur()">
+            <button id="start-button" class="start-button">Start</button>
+        </div>
+        <div id="form-container" class="form-container hidden">
+                <h1>Welcome to Tune Hub Application</h1>
+                <a href="/map-register" class="btn my-3">Click here to register</a>
+                <br/>
+                <a href="/map-login" class="btn my-3">Click here to login</a>
+            <form action="#" method="post">
+                <h2>Enjoy Music With Peace!</h2>
+                <!-- Form fields -->
+            </form>
+        </div>
+    </div>
+<!-- Bootstrap Bundle with Popper -->
+<script type="text/javascript">
+	function toggleBlur() {
+	    var background = document.getElementById('blur-background');
+	    var formContainer = document.getElementById('form-container');
+	
+	    background.style.filter = "blur(5px)";
+	    formContainer.classList.remove('hidden');
+	}
+</script>
+</body>
+</html>

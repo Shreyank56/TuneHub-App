@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Tune Hub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <style>
+    	body {
+		    margin: 0;
+		    padding: 0;	    
+		    background-image: url('https://www.antiqueswebdesign.com/ph9/upload/editor/images/no-background-music_vinyl.jpeg');
+		    background-size: cover;
+		    background-position: center;
+		    font-family: Arial, sans-serif;
+		    height: 100vh; /* Ensure full height */
+		    overflow: hidden; /* Hide scrollbars */
+		}
+		
+		.container {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    max-width: 400px;
+		    padding: 20px;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
+		    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+		    overflow-y: auto; /* Enable vertical scrolling within the form if needed */
+		    max-height: calc(100% - 40px); /* Ensure form fits within the viewport */
+		}
+		
+		h2 {
+		    text-align: center;
+		}
+		
+		
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		textarea {
+		    width: calc(100% - 22px); /* Adjust for padding and borders */
+		    padding: 10px;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
+		}
+		
+		input[type="radio"] {
+		    margin-right: 5px;
+		}
+		
+		button[type="submit"] {
+		    display: block;
+		    width: calc(100% - 22px); /* Adjust for padding and borders */
+		    padding: 10px;
+		    margin-top: 10px;
+		    background-color: #007bff;
+		    color: #fff;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		}
+		
+		button[type="submit"]:hover {
+		    background-color: #0056b3;
+		}
+
+    </style>
+</head>
+<body>
+<div class="container">
+        <h2>Registration Form</h2>
+        <form action="/register" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label>Gender:</label><br/>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+            <div>
+                <label>Role:</label><br/>
+                <input type="radio" id="admin" name="role" value="admin">
+                <label for="admin">Admin</label>
+                <input type="radio" id="customer" name="role" value="customer">
+                <label for="customer">Customer</label>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

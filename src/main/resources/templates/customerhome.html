@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome Customer</title>
+<style>
+	body {
+	    margin: 0;
+	    padding: 0;
+	    background-image: url('https://imgs.search.brave.com/_xJ3dHVtu0Oqu6m0cppTyTC1jqL2EKVZlqSH072F4dw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8w/OC8wMi8wNS80OS9y/ZWNvcmRpbmctMjU3/MDA1Nl82NDAuanBn');
+	    background-size: cover;
+	    background-position: center;
+	    font-family: Arial, sans-serif;
+	    height: 100vh;
+	}
+	h1{
+		color: white;
+	}
+	a {
+		position: relative;
+	    display: inline-block;
+	    padding: 15px 25px;
+	    margin: 10px;
+	    font-size: 16px;
+	    font-weight: bold;
+	    text-align: center;
+	    text-transform: uppercase;
+	    color: #000;
+	    border: none;
+	    border-radius: 5px;
+	    cursor: pointer;
+	    background-color: #fff; /* Semi-transparent background */
+	    background-size: cover;
+	    transition: background-color 0.3s ease;
+	}
+	
+	a:hover {
+	    background-color: #d3d3d3; /* Darken background color on hover */
+	}
+
+	a::after {
+	    content: '\266B'; /* Unicode character for music note */
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    opacity: 0;
+	    transition: opacity 0.3s ease;
+	}
+	
+	a:hover::after {
+	    opacity: 1;
+	    animation: float 1s ease infinite alternate; /* Music note floating animation */
+	}
+	
+	@keyframes float {
+	    0% {
+	        transform: translate(-50%, -50%) translateY(0);
+	    }
+	    100% {
+	        transform: translate(-50%, -50%) translateY(-15px);
+	    }
+	}
+</style>
+</head>
+<body>
+<h1>Welcome Customer to customer home</h1>
+<a href="/exploreSongs">Explore Songs</a>
+</body>
+</html>
